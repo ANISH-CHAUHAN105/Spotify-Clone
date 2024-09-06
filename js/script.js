@@ -55,7 +55,7 @@ function resetPlaylistButtons() {
 }
 
 async function fetchAlbum() {
-    let a = await fetch("https://drive.google.com/drive/folders/1f3AjXT9I-2VR_yUW3CmoLR8792Dj7mld?usp=drive_link");
+    let a = await fetch("https://github.com/ANISH-CHAUHAN105/Spotify-Clone/tree/songs/");
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -78,7 +78,7 @@ async function fetchAlbum() {
 }
 
 async function fetchSongs(albumName) {
-    let a = await fetch(`https://drive.google.com/drive/folders/1f3AjXT9I-2VR_yUW3CmoLR8792Dj7mld?usp=drive_link${albumName}/`);
+    let a = await fetch(`https://github.com/ANISH-CHAUHAN105/Spotify-Clone/tree/songs/${albumName}/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
