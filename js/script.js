@@ -78,7 +78,7 @@ async function fetchAlbum() {
 }
 
 async function fetchSongs(albumName) {
-    let a = await fetch(`http://127.0.0.1:3000/songs/${albumName}/`);
+    let a = await fetch(`https://github.com/ANISH-CHAUHAN105/Spotify-Clone/tree/main/songs/${albumName}/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
