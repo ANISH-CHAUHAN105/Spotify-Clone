@@ -276,8 +276,6 @@
 // }
 
 // main();
-
-
 let songUL = document.querySelector(".playlist-content").getElementsByTagName("ul")[0];
 let songs = [];
 let currSong = new Audio();
@@ -326,12 +324,22 @@ async function fetchAlbum() {
     try {
         const response = await fetch("https://api.github.com/repos/ANISH-CHAUHAN105/Spotify-Clone/contents/songs");
         const directories = await response.json();
+
         directories.forEach(dir => {
             if (dir.type === 'dir') {
                 albums.push(dir.name);
+                let coverUrl = '';
+
+                // Check if `dir.download_url` is valid
+                if (dir.download_url) {
+                    coverUrl = dir.download_url.replace('api.github.com/repos', 'raw.githubusercontent.com');
+                } else {
+                    console.error('No download URL for directory:', dir);
+                }
+
                 document.querySelector(".card-container").innerHTML += `
                     <div class="card">
-                        <img src="${dir.download_url.replace('api.github.com/repos', 'raw.githubusercontent.com')}/cover.jpg" alt="">
+                        <img src="${coverUrl}/cover.jpg" alt="">
                         <div class="card-text">
                             <p class="album-name">${dir.name}</p>
                         </div>
@@ -339,6 +347,7 @@ async function fetchAlbum() {
                     </div>`;
             }
         });
+
         return albums;
     } catch (error) {
         console.error('Error fetching albums:', error);
@@ -537,4 +546,5 @@ function updateCurrentSongInfo() {
 }
 
 main();
+
 
