@@ -55,7 +55,7 @@ function resetPlaylistButtons() {
 }
 
 async function fetchAlbum() {
-    let a = await fetch("http://127.0.0.1:3000/songs/");
+    let a = await fetch("https://github.com/ANISH-CHAUHAN105/Spotify-Clone/tree/main/songs/");
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
