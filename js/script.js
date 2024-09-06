@@ -317,7 +317,7 @@ async function fetchAlbum() {
                 albums.push(dir.name);
                 document.querySelector(".card-container").innerHTML += `
                     <div class="card">
-                        <img src="${dir.url.replace('api.github.com/repos', 'raw.githubusercontent.com')}/cover.jpg" alt="">
+                        <img src="https://raw.githubusercontent.com/ANISH-CHAUHAN105/Spotify-Clone/main/songs/${dir.name}/cover.jpg" alt="">
                         <div class="card-text">
                             <p class="album-name">${dir.name}</p>
                         </div>
