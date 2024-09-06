@@ -276,6 +276,7 @@
 // }
 
 // main();
+
 let songUL = document.querySelector(".playlist-content").getElementsByTagName("ul")[0];
 let songs = [];
 let currSong = new Audio();
@@ -325,29 +326,33 @@ async function fetchAlbum() {
         const response = await fetch("https://api.github.com/repos/ANISH-CHAUHAN105/Spotify-Clone/contents/songs");
         const directories = await response.json();
 
-        directories.forEach(dir => {
+        for (const dir of directories) {
             if (dir.type === 'dir') {
                 albums.push(dir.name);
+
+                // Fetch contents of each directory to find cover images
+                const albumResponse = await fetch(dir.url);
+                const albumContents = await albumResponse.json();
                 let coverUrl = '';
 
-                // Check if `dir.download_url` is valid
-                if (dir.download_url) {
-                    coverUrl = dir.download_url.replace('api.github.com/repos', 'raw.githubusercontent.com');
-                } else {
-                    console.error('No download URL for directory:', dir);
+                for (const file of albumContents) {
+                    if (file.name === 'cover.jpg') {
+                        coverUrl = file.download_url.replace('api.github.com/repos', 'raw.githubusercontent.com');
+                        break;
+                    }
                 }
 
                 document.querySelector(".card-container").innerHTML += `
                     <div class="card">
-                        <img src="${coverUrl}/cover.jpg" alt="">
+                        <img src="${coverUrl}" alt="">
                         <div class="card-text">
                             <p class="album-name">${dir.name}</p>
                         </div>
                         <button class="btn"><img class="play-pause" src="/img/play.svg" alt=""></button>
                     </div>`;
             }
-        });
-
+        }
+        
         return albums;
     } catch (error) {
         console.error('Error fetching albums:', error);
@@ -362,7 +367,7 @@ async function fetchSongs(albumName) {
         songs = [];
         files.forEach(file => {
             if (file.name.endsWith(".mp3")) {
-                songs.push(file.download_url);
+                songs.push(file.download_url.replace('api.github.com/repos', 'raw.githubusercontent.com'));
             }
         });
 
@@ -521,30 +526,19 @@ function playNextSong() {
     }
     currSong.src = songs[index];
     currSong.play();
-    updateCurrentSongInfo();
+    play.src = "img/pause.svg";
 }
 
 function playPreviousSong() {
     let index = songs.indexOf(currSong.src);
-    if (index > 0) {
+    if (index - 1 >= 0) {
         --index;
     } else {
         index = songs.length - 1;
     }
     currSong.src = songs[index];
     currSong.play();
-    updateCurrentSongInfo();
-}
-
-function updateCurrentSongInfo() {
-    let songPath = currSong.src.split("songs/")[1].split(".mp3")[0];
-    let songName = songPath.split("/").pop().replaceAll("%20", " ");
-    let songArtist = songPath.split("/").shift().replaceAll("%20", " ");
-    document.querySelector(".current-song").textContent = songName;
-    document.querySelector(".current-artist").textContent = songArtist;
-    document.querySelector(".currSong-image").src = currSong.src.replace("mp3", "jpg");
+    play.src = "img/pause.svg";
 }
 
 main();
-
-
