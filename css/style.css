@@ -576,9 +576,9 @@ footer {
 
 .bottom {
     z-index: 100;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    width: -webkit-fill-available;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
