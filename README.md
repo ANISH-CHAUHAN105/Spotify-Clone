@@ -1,4 +1,19 @@
-# Spotify-Clone
- 🎵 Spotify Clone Frontend A fully responsive Spotify clone built with HTML, CSS, and JavaScript.  This project mimics the core functionalities of a music player, including:  Play, pause, next, and previous track  controls Seek bar to scrub through songs Volume control with mute/unmute support Local storage for song management.  Future Enhancements:  Playlist support  Enhanced UI/UX features  More advanced player functionalities   Feel free to explore and contribute!
+🎵 Spotify Clone Frontend
+A fully responsive Spotify clone built with HTML, CSS, and JavaScript. This project mimics the core functionalities of a music player, including:
 
- visit at: https://anish-chauhan105.github.io/Spotify-Clone/
+✨ Features
+✅ Play, Pause, Next, Previous track controls
+✅ Seek Bar to scrub through songs
+✅ Volume Control with mute/unmute support
+✅ Local Storage for song management
+
+🚀 Future Enhancements
+🔹 Playlist support
+🔹 Enhanced UI/UX features
+🔹 More advanced player functionalities
+
+🔗 Live Demo
+🎧 Check out the live version: Spotify Clone
+
+📌 Contributing
+Feel free to explore, fork, and contribute to improve this project!
