@@ -10,7 +10,7 @@ A fully responsive Spotify clone built with **HTML, CSS, and JavaScript**. This 
 
 | Home Page | Player Page |
 | --------- | ---------- |
-| ![Home](img/project1.jpg) | ![Player](img/project2.jpg) |
+| ![Home](img/project1.png) | ![Player](img/project2.png) |
 
 ## 🛠️ Features
 
