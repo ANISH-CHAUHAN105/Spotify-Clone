@@ -1,58 +1,63 @@
 # 🎵 Spotify Clone Frontend
 
-Welcome to my **Spotify Clone Frontend**! This is a fully responsive music player built with **HTML, CSS, and JavaScript**, replicating key functionalities of Spotify.
+A fully responsive Spotify clone built with **HTML, CSS, and JavaScript**. This project mimics the core functionalities of a music player, including playback controls, seek bar, volume adjustments, and local storage for managing songs.
 
 ## 🔗 Live Demo
 
-[🎧 View the Live Website](https://anish-chauhan105.github.io/Spotify-Clone/)
+[🎧 View the Live Website](https://your-live-demo-link.com)
+
 ## 📸 Screenshots
 
-| Home Page | Player Interface |
-| --------- | --------------- |
-| ![Home](public/homepage.png) | ![Player](public/player.png) |
+| Home Page | Player Page |
+| --------- | ---------- |
+| ![Home](img/project1.jpg) | ![Player](img/project2.jpg) |
 
 ## 🛠️ Features
 
-- 🎵 **Music Controls** – Play, Pause, Next, Previous
-- 🎚 **Seek Bar** – Scrub through songs
-- 🔊 **Volume Control** – Mute/Unmute support
-- 💾 **Local Storage** – Manage songs efficiently
+- ✅ **Play, Pause, Next, Previous** track controls
+- 🎵 **Seek Bar** to scrub through songs
+- 🔊 **Volume Control** with mute/unmute support
+- 📂 **Local Storage** for song management
 
 ## 🚀 Future Enhancements
 
-- 📂 **Playlist Support** – Create and manage playlists
-- 🎨 **Enhanced UI/UX** – Better design & user experience
-- 🔄 **Advanced Features** – Shuffle, repeat, and lyrics integration
+- 🔹 **Playlist Support**
+- 🔹 **Enhanced UI/UX Features**
+- 🔹 **More Advanced Player Functionalities**
 
 ## 📂 Project Structure
 
 ```
 📁 spotify-clone
- ┣ 📂 css
- ┣ 📂 img
- ┣ 📂 js
  ┣ 📂 songs
+ ┃ ┣ 📂 artist
+ ┃ ┃ ┣ 📄 cover.jpg
+ ┃ ┃ ┣ 📄 song.jpg
+ ┃ ┃ ┗ 📄 bgcover.jpg
+ ┣ 📂 assets
+ ┣ 📂 scripts
+ ┣ 📂 styles
  ┣ 📄 index.html
  ┣ 📄 README.md
 ```
 
 ## 🚀 Getting Started
 
-### 1️⃣ Prerequisites
-Ensure you have the following installed:
-- **A modern web browser**
-
-### 2️⃣ Clone the Repository
+### 1️⃣ Clone the Repository
 
 ```sh
-git clone https://github.com/your-username/spotify-clone.git
-cd spotify-clone
+git clone https://github.com/ANISH-CHAUHAN105/Spotify-Clone.git
+cd Spotify-Clone
 ```
 
-### 3️⃣ Open the Project
-Simply open `index.html` in your browser to run the project.
+### 2️⃣ Open in Browser
+Simply open `index.html` in your preferred browser.
 
-## 🛠️ How to Contribute
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+## 💡 Contributing
 
 1. **Fork** the repository.
 2. **Create** a new branch: `git checkout -b feature-branch`.
@@ -60,14 +65,8 @@ Simply open `index.html` in your browser to run the project.
 4. **Push** to the branch: `git push origin feature-branch`.
 5. **Create a Pull Request** on GitHub.
 
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
 ## 📞 Contact
 
 - **GitHub**: [@ANISH-CHAUHAN105](https://github.com/ANISH-CHAUHAN105)
-- **Email**: [canish005@gmail.com](canish005@gmail.com) 
----
-📢 **Suggestions & feedback are always welcome!** 🚀
+- **Email**: [canish005@gmail.com](mailto:canish005@gmail.com)
 
