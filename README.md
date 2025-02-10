@@ -4,7 +4,7 @@ A fully responsive Spotify clone built with **HTML, CSS, and JavaScript**. This 
 
 ## 🔗 Live Demo
 
-[🎧 View the Live Website](https://your-live-demo-link.com)
+[🎧 View the Live Website](https://anish-chauhan105.github.io/Spotify-Clone/)
 
 ## 📸 Screenshots
 
