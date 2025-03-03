@@ -13,7 +13,7 @@ A fully responsive Spotify clone built with **HTML, CSS, and JavaScript**. This 
 | ![Home](img/homepage.png) | ![Player](img/player.png) |
 
 ## 🛠️ Features
-
+ 
 - ✅ **Play, Pause, Next, Previous** track controls
 - 🎵 **Seek Bar** to scrub through songs
 - 🔊 **Volume Control** with mute/unmute support
@@ -69,4 +69,3 @@ This project is licensed under the **MIT License**.
 
 - **GitHub**: [@ANISH-CHAUHAN105](https://github.com/ANISH-CHAUHAN105)
 - **Email**: [canish005@gmail.com](mailto:canish005@gmail.com)
-
